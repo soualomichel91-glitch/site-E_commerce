@@ -114,17 +114,17 @@ body {
 .text-col a {
   display: inline-block;
   padding: 0.8em 1.8em;
-  background: linear-gradient(135deg, #0077ff, #00c6ff);
+  background: linear-gradient(#40c9cb);
   color: #fff;
   font-weight: 600;
   text-decoration: none;
   border-radius: 50px;
-  box-shadow: 0 4px 12px rgba(0, 119, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(96, 154, 220, 0.3);
   transition: all 0.3s ease;
 }
 
 .text-col a:hover {
-  background: linear-gradient(135deg, #0055aa, #0099cc);
+  background: linear-gradient(#79aadb);
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 119, 255, 0.4);
 }
