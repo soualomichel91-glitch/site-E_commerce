@@ -120,7 +120,7 @@ body {
   text-decoration: none;
   border-radius: 50px;
   box-shadow: 0 4px 12px rgba(96, 154, 220, 0.3);
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .text-col a:hover {
@@ -129,7 +129,6 @@ body {
   box-shadow: 0 6px 16px rgba(0, 119, 255, 0.4);
 }
 
-/* --------- RESPONSIVE --------- */
 @media (max-width: 768px) {
   .two-col {
     grid-template-columns: 1fr;
@@ -141,3 +140,65 @@ body {
   }
 }
 
+
+/* ajout de style sur les categories */
+
+.categories {
+  padding: 4em 5%;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.categories h2 {
+  font-size: 2rem;
+  margin-bottom: 2em;
+  color: #222;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+.category {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.category img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.category h3 {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 992px) {
+  .categories-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* fin du style */
