@@ -1,69 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bproo store Dev-Design d'un site de E-commerce</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- debut du header -->
-<header class="navbar">
-  <div class="logo">
-    <a href="">
-      <img src="images/logo.png" alt="mon logo">
-    </a>
-  </div>
-  <nav>
-    <!-- Checkbox -->
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bproo store Dev-Design d'un site de E-commerce</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- debut du header -->
+    <section class="header-section">
+      <div class="container">
+        <header class="navbar">
+          <div class="logo">
+            <a href="">
+              <img src="images/logo.png" alt="mon logo" />
+            </a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="">Accueil</a></li>
+              <li><a href="">Produits</a></li>
+              <li><a href="">A Propos</a></li>
+              <li><a href="">Comptes</a></li>
+            </ul>
+            <img src="images/cart.png" alt="cart icon" width="28px" />
+          </nav>
+        </header>
 
-    <ul>
-      <li><a href="">Accueil</a></li>
-      <li><a href="">Produits</a></li>
-      <li><a href="">A Propos</a></li>
-      <li><a href="">Comptes</a></li>
-      <img src="images/cart.png" alt="cart icon" width="26px">
-    </ul>
-  </nav>
-</header>
+        <div class="row">
+          <div class="col-2">
+            <h1>Donnez à votre entrainement <br />un nouveau style!</h1>
+            <p>
+              Le succes n'est pas toujours une question de grandeur. <br />C'est
+              une question de coherence.Un travail acharné et consistant gagne
+              du succes. La grandeur viendra
+            </p>
+            <a href="">Explorer Maintenant &#8594;</a>
+          </div>
+          <div class="col-2">
+            <img src="images/image1.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- fin du header -->
-  <section class="two-col">
-  <div class="text-col">
-    <h1>Donnez à votre entrainement <br>un nouveau style</h1>
-    <p>Le succes n'est pas toujours une question de grandeur. <br>C'est une question de coherence.Un travail acharné et consistant gagne du succes. La grandeur viendra</p>
-    <a href="">Explorer maintenant</a>
-  </div>
-  <div class="image-col">
-    <img src="images/image1.png" alt="Page de couverture">
-  </div>
-</section>
-<!-- section categories -->
-<section class="categories">
-  <h2>Nos Catégories</h2>
-  <div class="categories-grid">
-    <div class="category">
-      <img src="images/category-1.jpg" alt="Chemises">
-      <h3>Categorie 1</h3>
-    </div>
-    <div class="category">
-      <img src="images/category-2.jpg" alt="Pantalons">
-      <h3>Categorie 2</h3>
-    </div>
-    <div class="category">
-      <img src="images/category-3.jpg" alt="Chaussures">
-      <h3>Categorie 3</h3>
-    </div>
-  </div>
-</section>
+    <!-- fin du header -->
 
+    <!-- Section Catégories -->
+    <section class="categories">
+      <div class="container">
+        <h2 class="section-title">Catégories vedettes</h2>
+        <div class="row">
+          <div class="col-3">
+            <img src="images/category-1.jpg" alt="" />
+          </div>
+          <div class="col-3">
+            <img src="images/category-2.jpg" alt="" />
+          </div>
+          <div class="col-3">
+            <img src="images/category-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-  
-</body>
+    <!-- fin de la section -->
+
+    <!-- section meilleurs produits -->
+
+    <section class="featured-products">
+      <div class="container">
+        <h2 class="section-title">Meilleurs Produits</h2>
+        <div class="row">
+          <div class="col-4">
+            <img src="images/product-1.jpg" alt="Produit 1" />
+            <h3>T-shirt rouge</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">80 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-2.jpg" alt="Produit 2" />
+            <h3>Chaussure noire</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">120 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-3.jpg" alt="Produit 3" />
+            <h3>pantalon gris</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">180 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-4.jpg" alt="Produit 4" />
+            <h3>T-shirt bleu</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+            </div>
+            <p class="price">90 000 GNF</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fin de la section -->
+
+    <!-- Nos derniers produits -->
+
+    <section class="featured-products">
+      <div class="container">
+        <h2 class="section-title">Nos derniers produits</h2>
+        <div class="row">
+          <div class="col-4">
+            <img src="images/product-5.jpg" alt="Produit 1" />
+            <h3>chaussure grise</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">180 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-6.jpg" alt="Produit 1" />
+            <h3>T-shirt noir</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">70 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-7.jpg" alt="Produit 1" />
+            <h3>Des chaussettes</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">40 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-8.jpg" alt="Produit 1" />
+            <h3>Montre de class</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">380 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-9.jpg" alt="Produit 1" />
+            <h3>Montre de class</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">500 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-10.jpg" alt="Produit 1" />
+            <h3>Chaussure noire</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">480 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-11.jpg" alt="Produit 1" />
+            <h3>Chaussure de sport</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">280 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-12.jpg" alt="Produit 1" />
+            <h3>Pantalon noir</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">80 000 GNF</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIN -->
+
+    <!-- les offres exclussifs -->
+
+    <section class="offres-exclusives">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img src="images/exclusive.png" alt="Offre-img" />
+          </div>
+
+          <div class="col-2">
+            <p>Exclusivement disponible sur bproo store</p>
+            <h1>Smart Band 4</h1>
+            <small
+              >Le Mi smart Band 4 dispose de 39,95% plus grand(plus grand que Mi
+              Band 3) Ecran tactile coloré AMOLED avec luminosité reglable pour
+              que tout soit claire comme possible</small
+            >
+            <a href="">Acheter Maintenant &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- fin des offres -->
+
+    <!-- section temoignages -->
+
+    <!-- Section Témoignages -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Témoignages</h2>
+        <div class="row">
+          <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+            <p>
+              J'adore ce site ! La livraison a été rapide et les produits sont
+              de très bonne qualité.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <img src="images/user-1.png" alt="Client 1" />
+            <h3>Agathe Traoré</h3>
+          </div>
+
+          <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+            <p>
+              Les prix sont abordables et le service client est très réactif. Je
+              recommande vivement !
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <img src="images/user-2.png" alt="Client 2" />
+            <h3>Abou Chérif</h3>
+          </div>
+
+          <div class="col-3">
+            <i class="fa fa-quote-left"></i>
+            <p>
+              Une très belle expérience d'achat en ligne, je suis 100%
+              satisfaite !
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <img src="images/user-3.png" alt="Client 3" />
+            <h3>Aissatou Diallo</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- fin du temoignages -->
+
+    <!-- Section Brands -->
+    <section class="brands">
+      <div class="container">
+        <div class="row">
+          <div class="brand-col-5">
+            <img src="images/logo-coca-cola.png" alt="Marque 1" />
+          </div>
+          <div class="brand-col-5">
+            <img src="images/logo-godrej.png" alt="Marque 2" />
+          </div>
+          <div class="brand-col-5">
+            <img src="images/logo-oppo.png" alt="Marque 3" />
+          </div>
+          <div class="brand-col-5">
+            <img src="images/logo-paypal.png" alt="Marque 4" />
+          </div>
+          <div class="brand-col-5">
+            <img src="images/logo-philips.png" alt="Marque 5" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- fin du brands -->
+
+    <!-- debut du footer -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Telecharger notre appli</h3>
+            <p>Telecharger l'application sur telephone mobile android et ios</p>
+          </div>
+          <div class="footer-col-2">
+            <img src="images/logo-white.png" alt="white logo" />
+            <p>
+              Notre objectif est de rendre durablement le plaisir et les
+              bienfaits du sport accessible à tous
+            </p>
+          </div>
+
+          <!-- Les Liens utiles -->
+          <div class="footer-col-1">
+            <h4>Les liens utiles</h4>
+            <ul>
+              <li><a href="#">Coupons</a></li>
+              <li><a href="#">Articles du blog</a></li>
+              <li><a href="#">Politique de retour</a></li>
+              <li><a href="#">Rejoignez l'affliation</a></li>
+            </ul>
+          </div>
+          <!-- fin Liens utiles -->
+
+          <!-- Réseaux sociaux -->
+          <div class="footer-col">
+            <h4>Suivez-nous</h4>
+            <div class="social-links">
+              <a href="#">Facebook<i class="fa fa-facebook"></i></a>
+              <a href="#">Twitter<i class="fa fa-twitter"></i></a>
+              <a href="#">Intagramme<i class="fa fa-instagram"></i></a>
+              <a href="#">You Tube<i class="fa fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- fin du footer -->
+  </body>
 </html>
