@@ -739,5 +739,102 @@ form button:hover {
 }
 
 
+/* style du bouton filtre */
+
+/* Container du filtre */
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-left: 900px;
+  margin-bottom: 50px;
+  font-family: 'Arial', sans-serif;
+}
+
+.filter-container label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.filter-container select {
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-container select:hover {
+  border-color: #16a7b4;
+}
+
+.filter-container select:focus {
+  outline: none;
+  border-color: #555;
+}
+
+/* Style des produits */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col-4 {
+  flex: 1 1 calc(25% - 20px);
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.col-4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.col-4 img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.col-4 h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.rating i {
+  color: #16a7b4;
+  margin-right: 2px;
+}
+
+.price {
+  font-weight: bold;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .col-4 {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .col-4 {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+/* fin style du bouton filtre */
+
 
 /* Fin de la page */

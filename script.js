@@ -47,6 +47,36 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// filtre
+
+const filterSelect = document.getElementById('filter');
+const productsContainer = document.querySelector('.products');
+const products = Array.from(productsContainer.children);
+
+filterSelect.addEventListener('change', () => {
+  const value = filterSelect.value;
+
+  let sortedProducts = [...products];
+
+  switch (value) {
+    case 'price':
+      sortedProducts.sort((a, b) => a.dataset.price - b.dataset.price);
+      break;
+    case 'sales':
+      sortedProducts.sort((a, b) => b.dataset.sales - a.dataset.sales);
+      break;
+    case 'popularity':
+      sortedProducts.sort((a, b) => b.dataset.popularity - a.dataset.popularity);
+      break;
+    default:
+      sortedProducts = products; // ordre par défaut
+  }
+
+  productsContainer.innerHTML = '';
+  sortedProducts.forEach(p => productsContainer.appendChild(p));
+});
+
+
 // Fin de l'authenti
 
 

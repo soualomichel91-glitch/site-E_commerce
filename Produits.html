@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bproo store Dev-Design d'un site de E-commerce</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- debut du header -->
+    <section class="header-section">
+      <div class="container">
+        <header class="navbar">
+          <div class="logo">
+            <a href="">
+              <img src="images/logo.png" alt="mon logo" />
+            </a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="">Accueil</a></li>
+              <li><a href="">Produits</a></li>
+              <li><a href="">A Propos</a></li>
+              <li><a href="">Comptes</a></li>
+            </ul>
+            <img src="images/cart.png" alt="cart icon" width="28px" />
+            <img
+              src="images/menu.png"
+              alt="menu"
+              width="26px"
+              class="menu-icon"
+            />
+          </nav>
+        </header>
+      </div>
+    </section>
+    <!-- fin du header -->
+
+    <!-- section meilleurs produits -->
+
+    <section class="featured-products">
+      <div class="container">
+        <h2 class="section-title">Tous nos Produits</h2>
+        <div class="filter-container">
+          <label for="filter">Filtrer par :</label>
+          <select id="filter" name="filter">
+            <option value="default">Par défaut</option>
+            <option value="price">Par prix</option>
+            <option value="sales">Par vente</option>
+            <option value="popularity">Par popularité</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <img src="images/product-1.jpg" alt="Produit 1" />
+            <h3>T-shirt rouge</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">80 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-2.jpg" alt="Produit 2" />
+            <h3>Chaussure noire</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">120 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-3.jpg" alt="Produit 3" />
+            <h3>pantalon gris</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">180 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-4.jpg" alt="Produit 4" />
+            <h3>T-shirt bleu</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+            </div>
+            <p class="price">90 000 GNF</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fin de la section -->
+
+    <!-- Nos derniers produits -->
+
+    <section class="featured-products">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <img src="images/product-5.jpg" alt="Produit 1" />
+            <h3>chaussure grise</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">180 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-6.jpg" alt="Produit 1" />
+            <h3>T-shirt noir</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">70 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-7.jpg" alt="Produit 1" />
+            <h3>Des chaussettes</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">40 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-8.jpg" alt="Produit 1" />
+            <h3>Montre de class</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">380 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-9.jpg" alt="Produit 1" />
+            <h3>Montre de class</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">500 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-10.jpg" alt="Produit 1" />
+            <h3>Chaussure noire</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">480 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-11.jpg" alt="Produit 1" />
+            <h3>Chaussure de sport</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">280 000 GNF</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-12.jpg" alt="Produit 1" />
+            <h3>Pantalon noir</h3>
+            <div class="rating">
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star" arial-hidden="true"></i>
+              <i class="fa fa-star-half-o" arial-hidden="true"></i>
+              <i class="fa fa-star-o" arial-hidden="true"></i>
+            </div>
+            <p class="price">80 000 GNF</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIN -->
+
+    <!-- debut du footer -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Telecharger notre appli</h3>
+            <p>Telecharger l'application sur telephone mobile android et ios</p>
+            <div class="app-logo">
+              <img src="images/play-store.png" alt="android app" />
+              <img src="images/app-store.png" alt="ios app" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="images/logo-white.png" alt="white logo" />
+            <p>
+              Notre objectif est de rendre durablement le plaisir et les
+              bienfaits du sport accessible à tous
+            </p>
+          </div>
+
+          <!-- Les Liens utiles -->
+          <div class="footer-col-1">
+            <h4>Les liens utiles</h4>
+            <ul>
+              <li><a href="#">Coupons</a></li>
+              <li><a href="#">Articles du blog</a></li>
+              <li><a href="#">Politique de retour</a></li>
+              <li><a href="#">Rejoignez l'affliation</a></li>
+            </ul>
+          </div>
+          <!-- fin Liens utiles -->
+
+          <!-- Réseaux sociaux -->
+          <div class="footer-col">
+            <h4>Suivez-nous</h4>
+            <div class="social-links">
+              <a href="#">Facebook<i class="fa fa-facebook"></i></a>
+              <a href="#">Twitter<i class="fa fa-twitter"></i></a>
+              <a href="#">Intagramme<i class="fa fa-instagram"></i></a>
+              <a href="#">You Tube<i class="fa fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">© 2025 Bproo Store - Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <!-- fin du footer -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
