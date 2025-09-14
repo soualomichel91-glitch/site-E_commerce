@@ -19,8 +19,6 @@ navUl.addEventListener('mouseleave', () => {
   navUl.classList.remove('active');
 });
 
-// page d'authentification
-
 document.addEventListener('DOMContentLoaded', function () {
   const btnLogin = document.getElementById('btn-login');
   const btnSignup = document.getElementById('btn-signup');
@@ -33,38 +31,20 @@ document.addEventListener('DOMContentLoaded', function () {
       btnSignup.classList.remove('active');
       loginForm.classList.add('active');
       signupForm.classList.remove('active');
-
-      btnLogin.setAttribute('aria-selected', 'true');
-      btnSignup.setAttribute('aria-selected', 'false');
     } else {
       btnSignup.classList.add('active');
       btnLogin.classList.remove('active');
       signupForm.classList.add('active');
       loginForm.classList.remove('active');
-
-      btnSignup.setAttribute('aria-selected', 'true');
-      btnLogin.setAttribute('aria-selected', 'false');
     }
   }
 
+  // Initialisation
+  activate('login');
+
   btnLogin.addEventListener('click', () => activate('login'));
   btnSignup.addEventListener('click', () => activate('signup'));
-
-  // Empêcher le submit réel pendant les tests (tu peux adapter)
-  loginForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    // place ici ta logique de connexion (AJAX / fetch)
-    alert('Connexion — formulaire soumis (simulation)');
-  });
-
-  signupForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    // place ici ta logique d'inscription (AJAX / fetch)
-    alert("Inscription — formulaire soumis (simulation)");
-  });
 });
-
-
 
 
 // Fin de l'authenti

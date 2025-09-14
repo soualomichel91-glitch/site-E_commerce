@@ -633,26 +633,43 @@ body {
 /* --- Boutons Tabs --- */
 .tabs {
   display: flex;
-  gap: 10px;
+  justify-content: center;
   margin-bottom: 20px;
+  border-bottom: 1px solid #ddd; /* ligne grise légère en bas */
 }
-
 
 .tabs button {
   flex: 1;
   padding: 12px;
-  background: none; /* pas de fond */
-  color: #555;
+  border: none;
+  background: none;
   font-weight: bold;
+  font-size: 16px;
+  color: #333;
   cursor: pointer;
-  transition: 0.3s;
+  position: relative;
+  transition: color 0.3s;
 }
 
-
 .tabs button.active {
-  border: 5px solid #16a7b4; /* plein trait pour l'actif */
-  background: #16a7b4;
-  color: #fff;
+  color: #0f1724; /* couleur du texte actif */
+}
+
+.tabs button::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* juste sous le bouton */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #16a7b4; /* turquoise */
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.tabs button.active::after {
+  width: 60%; /* longueur du soulignement */
 }
 
 /* --- Formulaires --- */
