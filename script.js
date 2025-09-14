@@ -1,24 +1,23 @@
+// ====================== MENU BURGER ======================
 const menuIcon = document.querySelector('.menu-icon');
 const navUl = document.querySelector('nav ul');
 
-// Ouvrir / fermer le menu au clic
 menuIcon.addEventListener('click', (e) => {
-  e.stopPropagation(); // éviter que le clic se propage au document
+  e.stopPropagation();
   navUl.classList.toggle('active');
 });
 
-// Fermer le menu si on clique ailleurs
 document.addEventListener('click', (e) => {
   if (!navUl.contains(e.target) && !menuIcon.contains(e.target)) {
     navUl.classList.remove('active');
   }
 });
 
-// Fermer le menu quand la souris quitte la zone du menu (optionnel)
 navUl.addEventListener('mouseleave', () => {
   navUl.classList.remove('active');
 });
 
+// ====================== AUTHENTIFICATION ======================
 document.addEventListener('DOMContentLoaded', function () {
   const btnLogin = document.getElementById('btn-login');
   const btnSignup = document.getElementById('btn-signup');
@@ -46,68 +45,60 @@ document.addEventListener('DOMContentLoaded', function () {
   btnSignup.addEventListener('click', () => activate('signup'));
 });
 
-
-// filtre
-
+// ====================== FILTRE PRODUITS ======================
 const filterSelect = document.getElementById('filter');
-const productsContainer = document.querySelector('.products');
-const products = Array.from(productsContainer.children);
+const productsContainerFilter = document.querySelector('.products');
+const productsFilter = Array.from(productsContainerFilter.children);
 
 filterSelect.addEventListener('change', () => {
   const value = filterSelect.value;
 
-  let sortedProducts = [...products];
+  let sortedProducts = [...productsFilter];
 
   switch (value) {
     case 'price':
-      sortedProducts.sort((a, b) => a.dataset.price - b.dataset.price);
+      sortedProducts.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
       break;
     case 'sales':
-      sortedProducts.sort((a, b) => b.dataset.sales - a.dataset.sales);
+      sortedProducts.sort((a, b) => Number(b.dataset.sales) - Number(a.dataset.sales));
       break;
     case 'popularity':
-      sortedProducts.sort((a, b) => b.dataset.popularity - a.dataset.popularity);
+      sortedProducts.sort((a, b) => Number(b.dataset.popularity) - Number(a.dataset.popularity));
       break;
     default:
-      sortedProducts = products; // ordre par défaut
+      sortedProducts = productsFilter;
   }
 
-  productsContainer.innerHTML = '';
-  sortedProducts.forEach(p => productsContainer.appendChild(p));
+  productsContainerFilter.innerHTML = '';
+  sortedProducts.forEach(p => productsContainerFilter.appendChild(p));
 });
 
-
-// Fin de l'authenti
-
-// debut pagination
-
+// ====================== PAGINATION ======================
 const productsPerPage = 8;
-const productsContainer = document.querySelector('.row');
-const products = Array.from(productsContainer.children);
+const productsContainerPagination = document.querySelector('.row');
+const productsPagination = Array.from(productsContainerPagination.children);
 const paginationContainer = document.querySelector('.pagination');
 
 let currentPage = 1;
-const totalPages = Math.ceil(products.length / productsPerPage);
+const totalPages = Math.ceil(productsPagination.length / productsPerPage);
 
 function showPage(page) {
   currentPage = page;
   const start = (page - 1) * productsPerPage;
   const end = start + productsPerPage;
 
-  products.forEach((product, index) => {
+  productsPagination.forEach((product, index) => {
     product.style.display = index >= start && index < end ? 'block' : 'none';
   });
 
-  // Mettre à jour les boutons
   const pages = paginationContainer.querySelectorAll('.page');
   pages.forEach(p => p.classList.remove('active'));
-  pages[page - 1].classList.add('active');
+  if (pages[page - 1]) pages[page - 1].classList.add('active');
 }
 
 // Initialisation
 showPage(1);
 
-// Ajouter les événements aux boutons de page
 paginationContainer.addEventListener('click', (e) => {
   e.preventDefault();
   if (e.target.classList.contains('page')) {
@@ -118,9 +109,3 @@ paginationContainer.addEventListener('click', (e) => {
     if (currentPage < totalPages) showPage(currentPage + 1);
   }
 });
-
-
-// fin de pagination
-
-
-// Fin du script

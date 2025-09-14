@@ -780,7 +780,7 @@ form button:hover {
 }
 
 /* Style des produits */
-.row {
+.row2 {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
