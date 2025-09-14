@@ -419,6 +419,17 @@ nav img {
   }
 }
 
+/* Forcer couleur des liens dans le footer */
+.footer a {
+  color: #bbb; /* blanc par défaut */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #16a7b4; /* accent couleur thème au survol */
+}
+
+
 hr{
     margin: 20px;
 
@@ -552,7 +563,7 @@ hr{
     gap: 10px;
     background: #fff;
     position: absolute;
-    top: 60px; /* sous la navbar */
+    top: 60px; 
     right: 5%;
     padding: 10px;
     border-radius: 8px;
@@ -570,88 +581,146 @@ hr{
 
 /* page d'authentification */
 
-/* --- Authentification --- */
+/* --- Reset général --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+/* --- Layout principal --- */
 .auth-section {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Partie gauche (image) */
+.auth-left {
+  flex: 1;
+  background: #eaf2fb;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
-  background: #eaf2fb;
+}
+
+.auth-left img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Partie droite (formulaires) */
+.auth-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
 }
 
 .auth-container {
-  background: #fff;
-  padding: 30px 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   width: 100%;
   max-width: 400px;
-  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.auth-container h2 {
-  margin-bottom: 20px;
-  color: #16a7b4;
-}
-
-.auth-container form {
+/* --- Boutons Tabs --- */
+.tabs {
   display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+.tabs button {
+  flex: 1;
+  padding: 12px;
+  background: none; /* pas de fond */
+  color: #555;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.tabs button.active {
+  border: 5px solid #16a7b4; /* plein trait pour l'actif */
+  background: #16a7b4;
+  color: #fff;
+}
+
+/* --- Formulaires --- */
+form {
+  display: none;
   flex-direction: column;
 }
 
-.auth-container label {
-  text-align: left;
-  margin-bottom: 5px;
-  font-weight: 500;
+form.active {
+  display: flex;
 }
 
-.auth-container input {
-  padding: 10px;
+form h2 {
   margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  text-align: center;
+  color: #333;
 }
 
-.auth-container button {
+form label {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+form input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+form input:focus {
+  border-color: #16a7b4;
+}
+
+form button {
+  margin-top: 20px;
   padding: 12px;
+  border: none;
   background: #16a7b4;
   color: #fff;
-  border: none;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 500;
-  transition: background 0.3s;
 }
 
-.auth-container button:hover {
-  background: #0f8b97;
+form button:hover {
+  background: #135353;
 }
 
-.auth-container p {
-  margin-top: 15px;
-  font-size: 14px;
-}
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .auth-section {
+    flex-direction: column;
+  }
 
-.auth-container p a {
-  color: #16a7b4;
-  text-decoration: none;
-}
+  .auth-left {
+    display: none; 
+  }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .auth-container {
+  .auth-right {
+    flex: 1;
     padding: 20px;
   }
-
-  .auth-container h2 {
-    font-size: 22px;
-  }
-
-  .auth-container input,
-  .auth-container button {
-    font-size: 14px;
-  }
 }
+
 
 
 /* Fin de la page */

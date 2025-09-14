@@ -1,108 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bproo Store - Connexion</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <header class="navbar">
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bproo Store - Authentification</title>
+
+  <!-- Font Awesome (icônes) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header-section">
+    <div class="container navbar">
       <div class="logo">
-        <a href="">
-          <img src="images/logo.png" alt="mon logo" />
-        </a>
+        <a href="#"><img src="images/logo.png" alt="mon logo" /></a>
       </div>
-      <nav>
-        <ul>
-          <li><a href="">Accueil</a></li>
-          <li><a href="">Produits</a></li>
-          <li><a href="">A Propos</a></li>
-          <li><a href="">Comptes</a></li>
+
+      <nav class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Produits</a></li>
+          <li><a href="#">A Propos</a></li>
+          <li><a href="#">Comptes</a></li>
         </ul>
-        <img src="images/cart.png" alt="cart icon" width="28px" />
-        <img src="images/menu.png" alt="menu" width="26px" class="menu-icon">
+
+        <div class="icons">
+          <img src="images/cart.png" alt="cart icon" width="28" />
+          <img src="images/menu.png" alt="menu" width="26" class="menu-icon" />
+        </div>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <!-- Section Authentification -->
+  <!-- AUTH SECTION -->
+  <main>
     <section class="auth-section">
-      <div class="auth-container">
-        <h2>Connexion</h2>
-        <form>
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Entrez votre email" required />
+      <!-- Partie gauche : image -->
+      <div class="auth-left">
+        <img src="images/image1.png" alt="illustration authentification" />
+      </div>
 
-          <label for="password">Mot de passe</label>
-          <input type="password" id="password" placeholder="Entrez votre mot de passe" required />
+      <!-- Partie droite : formulaires -->
+      <div class="auth-right">
+        <div class="auth-container">
+          <!-- Boutons (type="button" pour éviter submit) -->
+          <div class="tabs" role="tablist" aria-label="Connexion ou Inscription">
+            <button id="btn-login" type="button" class="tab active" aria-controls="login-form" aria-selected="true">Connexion</button>
+            <button id="btn-signup" type="button" class="tab" aria-controls="signup-form" aria-selected="false">Inscription</button>
+          </div>
 
-          <button type="submit">Se connecter</button>
-        </form>
-        <p>Pas encore de compte ? <a href="signup.html">Inscrivez-vous</a></p>
+          <!-- Formulaire Connexion -->
+          <form id="login-form" class="form active" novalidate>
+            <h2>Connexion</h2>
+
+            <label for="email-login">Email</label>
+            <input type="email" id="email-login" placeholder="Votre email" required />
+
+            <label for="password-login">Mot de passe</label>
+            <input type="password" id="password-login" placeholder="Votre mot de passe" required />
+
+            <button type="submit">Se connecter</button>
+          </form>
+
+          <!-- Formulaire Inscription -->
+          <form id="signup-form" class="form" novalidate>
+            <h2>Inscription</h2>
+
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" placeholder="Votre nom complet" required />
+
+            <label for="email-signup">Email</label>
+            <input type="email" id="email-signup" placeholder="Votre email" required />
+
+            <label for="password-signup">Mot de passe</label>
+            <input type="password" id="password-signup" placeholder="Votre mot de passe" required />
+
+            <button type="submit">S'inscrire</button>
+          </form>
+        </div>
       </div>
     </section>
+  </main>
 
-    <!-- fin du header -->
-
-     <!-- debut du footer -->
-
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="footer-col-1">
-            <h3>Telecharger notre appli</h3>
-            <p>Telecharger l'application sur telephone mobile android et ios</p>
-            <div class="app-logo">
-              <img src="images/play-store.png" alt="android app" />
-              <img src="images/app-store.png" alt="ios app" />
-            </div>
-          </div>
-          <div class="footer-col-2">
-            <img src="images/logo-white.png" alt="white logo" />
-            <p>
-              Notre objectif est de rendre durablement le plaisir et les
-              bienfaits du sport accessible à tous
-            </p>
-          </div>
-
-          <!-- Les Liens utiles -->
-          <div class="footer-col-1">
-            <h4>Les liens utiles</h4>
-            <ul>
-              <li><a href="#">Coupons</a></li>
-              <li><a href="#">Articles du blog</a></li>
-              <li><a href="#">Politique de retour</a></li>
-              <li><a href="#">Rejoignez l'affliation</a></li>
-            </ul>
-          </div>
-          <!-- fin Liens utiles -->
-
-          <!-- Réseaux sociaux -->
-          <div class="footer-col">
-            <h4>Suivez-nous</h4>
-            <div class="social-links">
-              <a href="#">Facebook<i class="fa fa-facebook"></i></a>
-              <a href="#">Twitter<i class="fa fa-twitter"></i></a>
-              <a href="#">Intagramme<i class="fa fa-instagram"></i></a>
-              <a href="#">You Tube<i class="fa fa-youtube"></i></a>
-            </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h3>Télécharger notre appli</h3>
+          <p>Télécharger l'application sur téléphone mobile Android et iOS</p>
+          <div class="app-logo">
+            <img src="images/play-store.png" alt="android app" />
+            <img src="images/app-store.png" alt="ios app" />
           </div>
         </div>
-        <hr />
-        <p class="copyright">© 2025 Bproo Store - Tous droits réservés.</p>
+
+        <div class="footer-col">
+          <img src="images/logo-white.png" alt="white logo" />
+          <p>Notre objectif est de rendre durablement le plaisir et les bienfaits du sport accessible à tous</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Liens utiles</h4>
+          <ul>
+            <li><a href="#">Coupons</a></li>
+            <li><a href="#">Articles du blog</a></li>
+            <li><a href="#">Politique de retour</a></li>
+            <li><a href="#">Rejoignez l'affiliation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Suivez-nous</h4>
+          <div class="social-links">
+            <a href="#">Facebook <i class="fa fa-facebook"></i></a>
+            <a href="#">Twitter <i class="fa fa-twitter"></i></a>
+            <a href="#">Instagram <i class="fa fa-instagram"></i></a>
+            <a href="#">YouTube <i class="fa fa-youtube"></i></a>
+          </div>
+        </div>
       </div>
-    </footer>
 
-    <!-- fin du footer -->
+      <hr />
+      <p class="copyright">© 2025 Bproo Store - Tous droits réservés.</p>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
 </html>
