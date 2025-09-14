@@ -406,7 +406,7 @@ nav img {
 /* Responsive */
 @media (max-width: 768px) {
   .footer .row {
-    flex-direction: column; /* en colonne sur mobile */
+    flex-direction: column; 
     text-align: center;
   }
 
@@ -438,15 +438,12 @@ hr{
 
 /* responsive design */
 
-/* MOBILE - max 768px */
 @media (max-width: 768px) {
 
-  /* Masquer les liens de navigation */
   nav ul {
     display: none;
   }
 
-  /* Navbar alignée : logo à gauche, menu et panier à droite */
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -456,11 +453,10 @@ hr{
 
   /* Logo */
   .logo img {
-    width: 100px;  /* réduire légèrement le logo sur mobile */
+    width: 100px;  
     height: auto;
   }
 
-  /* Menu icon et panier visibles */
   nav img {
     display: inline-block;
     width: 28px;   /* panier */
@@ -468,13 +464,13 @@ hr{
     cursor: pointer;
   }
 
-  /* Ajuster espacement entre panier et menu icon */
+
   nav img.menu-icon {
     margin-left: 10px;
     width: 26px;
   }
 
-  /* Masquer le reste du header (texte + image du hero si présent) */
+
   .header-section .row {
     display: none;
   }
@@ -482,10 +478,8 @@ hr{
 
 /* responsive de la classe row */
 
-/* --- MOBILE RESPONSIVE (max-width: 768px) --- */
 @media (max-width: 768px) {
 
-  /* Navbar */
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -573,3 +567,91 @@ hr{
 
 
 /* fin du responsive design */
+
+/* page d'authentification */
+
+/* --- Authentification --- */
+.auth-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #eaf2fb;
+}
+
+.auth-container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #16a7b4;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container label {
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.auth-container input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-container button {
+  padding: 12px;
+  background: #16a7b4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.auth-container button:hover {
+  background: #0f8b97;
+}
+
+.auth-container p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-container p a {
+  color: #16a7b4;
+  text-decoration: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 20px;
+  }
+
+  .auth-container h2 {
+    font-size: 22px;
+  }
+
+  .auth-container input,
+  .auth-container button {
+    font-size: 14px;
+  }
+}
+
+
+/* Fin de la page */
