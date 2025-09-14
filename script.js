@@ -79,5 +79,48 @@ filterSelect.addEventListener('change', () => {
 
 // Fin de l'authenti
 
+// debut pagination
+
+const productsPerPage = 8;
+const productsContainer = document.querySelector('.row');
+const products = Array.from(productsContainer.children);
+const paginationContainer = document.querySelector('.pagination');
+
+let currentPage = 1;
+const totalPages = Math.ceil(products.length / productsPerPage);
+
+function showPage(page) {
+  currentPage = page;
+  const start = (page - 1) * productsPerPage;
+  const end = start + productsPerPage;
+
+  products.forEach((product, index) => {
+    product.style.display = index >= start && index < end ? 'block' : 'none';
+  });
+
+  // Mettre à jour les boutons
+  const pages = paginationContainer.querySelectorAll('.page');
+  pages.forEach(p => p.classList.remove('active'));
+  pages[page - 1].classList.add('active');
+}
+
+// Initialisation
+showPage(1);
+
+// Ajouter les événements aux boutons de page
+paginationContainer.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (e.target.classList.contains('page')) {
+    showPage(Number(e.target.textContent));
+  } else if (e.target.classList.contains('prev')) {
+    if (currentPage > 1) showPage(currentPage - 1);
+  } else if (e.target.classList.contains('next')) {
+    if (currentPage < totalPages) showPage(currentPage + 1);
+  }
+});
+
+
+// fin de pagination
+
 
 // Fin du script
