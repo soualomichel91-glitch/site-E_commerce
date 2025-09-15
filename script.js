@@ -136,3 +136,42 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+
+// table dynamique
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cartTable = document.querySelector('.cart-table tbody');
+  const cartTotal = document.getElementById('cartTotal');
+
+  function updateTotal() {
+    let total = 0;
+    cartTable.querySelectorAll('tr').forEach(row => {
+      const price = parseInt(row.children[2].textContent.replace(/\D/g, ''));
+      const quantity = parseInt(row.querySelector('.quantity').value);
+      const subtotal = price * quantity;
+      row.querySelector('.subtotal').textContent = subtotal.toLocaleString() + ' GNF';
+      total += subtotal;
+    });
+    cartTotal.textContent = total.toLocaleString() + ' GNF';
+  }
+
+  // Mettre à jour le total au changement de quantité
+  cartTable.querySelectorAll('.quantity').forEach(input => {
+    input.addEventListener('input', updateTotal);
+  });
+
+  // Supprimer un produit
+  cartTable.addEventListener('click', e => {
+    if (e.target.classList.contains('remove-btn')) {
+      e.target.closest('tr').remove();
+      updateTotal();
+    }
+  });
+
+  // Initialisation du total
+  updateTotal();
+});
+
+
+// fin de la dynamisation
