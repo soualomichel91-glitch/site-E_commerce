@@ -109,3 +109,15 @@ paginationContainer.addEventListener('click', (e) => {
     if (currentPage < totalPages) showPage(currentPage + 1);
   }
 });
+
+
+// details produits
+
+function changeImage(smallImg) {
+  const mainImage = document.getElementById("mainImage");
+  mainImage.src = smallImg.src;
+}
+
+
+
+// fin du detail
