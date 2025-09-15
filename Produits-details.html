@@ -43,14 +43,27 @@
     </section>
     <!-- fin du header -->
 
-    <!-- details produits -->
 <!-- details produits -->
-<section class="product-details">
-  <div class="product-container">
-    <div class="product-image">
-      <img src="images/gallery-1.jpg" alt="Image produit">
+  <section class="product-details">
+    <div class="product-container">
+      <div class="product-image">
+        <img id="mainImage" src="images/gallery-1.jpg" alt="Image produit">
+        <div class="small-img-row">
+    <div class="small-img-col">
+      <img src="images/gallery-1.jpg" alt="Image 1" class="small-img">
     </div>
+    <div class="small-img-col">
+      <img src="images/gallery-2.jpg" alt="Image 2" class="small-img">
+    </div>
+    <div class="small-img-col">
+      <img src="images/gallery-3.jpg" alt="Image 3" class="small-img">
+    </div>
+    <div class="small-img-col">
+      <img src="images/gallery-4.jpg" alt="Image 4" class="small-img">
+    </div>
+  </div>
 
+    </div>
     <!-- Colonne droite (infos) -->
     <div class="product-info">
       <p>
@@ -90,6 +103,7 @@
         Associez-le à un short pour votre séance d'entraînement <br>le matin ou à un jean pour une soirée avec vos gars.
       </p>
     </div>
+   </div>
   </div>
 </section>
 
@@ -103,6 +117,7 @@
     <section class="featured-products">
       <div class="produits-container">
         <h2 class="section-title">Tous nos Produits</h2>
+        <P>voir plus</P>
         <div class="filter-container">
           <label for="filter">Filtrer par :</label>
           <select id="filter" name="filter">
@@ -112,7 +127,7 @@
             <option value="popularity">Par popularité</option>
           </select>
         </div>
-        </div>
+      </div>
 
         <div class="row2">
           <div class="col-4">
