@@ -1035,11 +1035,12 @@ form button:hover {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .product-container 
+  .product-container {
     flex-direction: column;
-    align-item
+    align-items: center;
+  }
 }
-  
+
 
 /* style des -o-table-baseline */
 
@@ -1274,9 +1275,3 @@ form button:hover {
     width: 100%;
   }
 }
-
-
-/* fin de style  */
-
-
-/* Fin de la page */
